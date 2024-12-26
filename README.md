@@ -1,1 +1,1 @@
-Data are included from the GISS Surface Temperature (GISTEMP) analysis and the global component of Climate at a Glance (GCAG). Two datasets are provided: 1) global monthly mean and 2) annual mean temperature anomalies in degrees Celsius. The GISTEMP data are available from 1880 to the present
+Data are included from the GISS Surface Temperature (GISTEMP) analysis and the global component of Climate at a Glance (GCAG).The GISTEMP data are available from 1880 to the present.
