@@ -9,9 +9,12 @@ import matplotlib.pyplot as plt
 data = pd.read_csv('Data Analysis\Global_temp.csv', skiprows=1)
 data_cleaned = data.replace('***', pd.NA).apply(pd.to_numeric, errors='coerce')
 
-# Use 'Year' as the input and 'J-D' as the target variable
-x = data_cleaned[['Year']].dropna()
-y = data_cleaned['J-D'].dropna()
+# Drop rows with missing values in both 'Year' and 'J-D'
+data_cleaned = data_cleaned[['Year', 'J-D']].dropna()
+
+# Use the cleaned data for x and y
+x = data_cleaned[['Year']]
+y = data_cleaned['J-D']
 
 # Split the dataset into training and test sets
 x_train, x_test, y_train, y_test = train_test_split(x, y, test_size=0.2, random_state=42)
